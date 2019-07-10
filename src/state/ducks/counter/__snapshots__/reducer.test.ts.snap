@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`decrement 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+- 0
++ -1"
+`;
+
+exports[`increment 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+- 0
++ 1"
+`;

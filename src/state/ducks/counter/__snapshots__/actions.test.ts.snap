@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match Snapshot decrement 1`] = `
+Object {
+  "payload": 1,
+  "type": "COUNTER/DECREMENT",
+}
+`;
+
+exports[`Match Snapshot decrement(5) 1`] = `
+Object {
+  "payload": 5,
+  "type": "COUNTER/DECREMENT",
+}
+`;
+
+exports[`Match Snapshot increment 1`] = `
+Object {
+  "payload": 1,
+  "type": "COUNTER/INCREMENT",
+}
+`;
+
+exports[`Match Snapshot increment(5) 1`] = `
+Object {
+  "payload": 5,
+  "type": "COUNTER/INCREMENT",
+}
+`;
+
+exports[`Match Snapshot onClickDecrement 1`] = `
+Object {
+  "type": "USER_ACTION/ON_CLICK/DECREMENT",
+}
+`;
+
+exports[`Match Snapshot onClickIncrement 1`] = `
+Object {
+  "type": "USER_ACTION/ON_CLICK/INCREMENT",
+}
+`;
+
+exports[`Match Snapshot onClickIncrementAsync 1`] = `
+Object {
+  "type": "USER_ACTION/ON_CLICK/INCREMENT_ASYNC",
+}
+`;
+
+exports[`Match Snapshot onClickIncrementIfOdd 1`] = `
+Object {
+  "type": "USER_ACTION/ON_CLICK/INCREMENT_IF_ODD",
+}
+`;
