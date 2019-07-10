@@ -1,4 +1,5 @@
 const path = require('path');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = (env, { mode }) => {
   const __IS_PRODUCTION__ = mode === 'production';
@@ -22,8 +23,31 @@ module.exports = (env, { mode }) => {
 
     module: {
       rules: [
+        // TypeScript
+        {
+          test: /\.tsx?$/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+              babelrc: false,
+              presets: [
+                '@babel/preset-env',
+                '@babel/preset-typescript',
+                '@babel/preset-react',
+              ],
+              plugins: [
+                ['@babel/plugin-proposal-class-properties', { loose: true }],
+              ],
+            },
+          },
+        },
       ],
     },
+
+    plugins: [
+      new ForkTsCheckerWebpackPlugin(),
+    ],
   };
 
   return config;
