@@ -6,7 +6,8 @@
   "author": "fukumotoy",
   "scripts": {
     "build": "webpack --mode=production --progress",
-    "eslint": "eslint --fix '**/*.{js,ts,tsx}'"
+    "eslint": "eslint --fix '**/*.{js,ts,tsx}'",
+    "stylelint": "stylelint --fix 'src/**/*.scss'"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,11 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.18.2",
     "sass-loader": "^7.1.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-scss": "^3.9.1",
     "typescript": "^3.5.3",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
