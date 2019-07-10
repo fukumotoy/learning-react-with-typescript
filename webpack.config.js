@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, { mode }) => {
@@ -27,6 +28,14 @@ module.exports = (env, { mode }) => {
 
     module: {
       rules: [
+        // ESLint
+        {
+          enforce: 'pre',
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader',
+        },
+
         // TypeScript
         {
           test: /\.tsx?$/,
@@ -92,6 +101,7 @@ module.exports = (env, { mode }) => {
 
     plugins: [
       new ForkTsCheckerWebpackPlugin(),
+      new StylelintPlugin(),
       new MiniCssExtractPlugin({
         filename: '[name].bundle.css',
       }),
