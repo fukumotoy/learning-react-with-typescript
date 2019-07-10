@@ -1,0 +1,35 @@
+.Modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  outline: 0;
+
+  &__dialog {
+    width: 80%;
+  }
+
+  &__content {
+    background-color: #fff;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__dismiss {
+    border: 0;
+    background: none;
+  }
+}
+
+.is-modalOpened {
+  overflow: hidden;
+}
