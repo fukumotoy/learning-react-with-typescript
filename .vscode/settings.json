@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "eslint.validate": [
+    { "language": "javascript", "autoFix": true },
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
+  "eslint.alwaysShowStatus": true,
+  "stylelint.enable": true,
+  "prettier.stylelintIntegration": true
+}
