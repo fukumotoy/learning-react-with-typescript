@@ -1,0 +1,160 @@
+// Variables
+//
+// --------------------------------
+
+// Color system
+// ----------------
+
+$brand-color: #f03;
+
+$standard-red: #ff6673;
+$standard-black: #444;
+$standard-blue: #1a75ff;
+$standard-gray: #eee;
+$standard-white: #fff;
+
+$standard-colors: (
+  'red': $standard-red,
+  'black': $standard-black,
+  'blue': $standard-blue,
+  'gray': $standard-gray,
+  'white': $standard-white,
+);
+
+$expand-red: #e60013;
+$expand-orange: #ff7e21;
+$expand-yellow: #ffd200;
+$expand-lime: #8cda27;
+$expand-green: #38ac25;
+$expand-teal: #3fc8c6;
+$expand-cyan: #00b1eb;
+$expand-blue: #3466de;
+$expand-indigo: #444acc;
+$expand-purple: #6648c0;
+$expand-violet: #b746aa;
+$expand-pink: #fc489e;
+$expand-black: #333;
+
+$expand-colors: (
+  'red': $expand-red,
+  'orange': $expand-orange,
+  'yellow': $expand-yellow,
+  'lime': $expand-lime,
+  'green': $expand-green,
+  'teal': $expand-teal,
+  'cyan': $expand-cyan,
+  'blue': $expand-blue,
+  'indigo': $expand-indigo,
+  'purple': $expand-purple,
+  'violet': $expand-violet,
+  'pink': $expand-pink,
+  'black': $expand-black,
+);
+
+$primary: $standard-blue;
+$danger: $expand-red;
+$success: #34b906;
+$warning: #fa0;
+
+$theme-colors: (
+  'primary': $primary,
+  'danger': $danger,
+  'success': $success,
+  'warning': $warning,
+);
+
+// Spacing
+// ----------------
+
+$spacer: 1rem;
+
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25,
+  ),
+  2: (
+    $spacer * 0.5,
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 1.5,
+  ),
+  5: (
+    $spacer * 3,
+  ),
+);
+
+// Breakpoints
+// ----------------
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 970px;
+
+$breakpoints: (
+  'sm': $breakpoint-sm,
+  'md': $breakpoint-md,
+  'lg': $breakpoint-lg,
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+// ----------------
+
+$body-bg: $standard-white;
+$body-color: $standard-black;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+// ----------------
+
+$font-family-sans-serif: -apple-system, sans-serif;
+$font-family-monospace: monospace, serif;
+$font-family-base: $font-family-sans-serif;
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25;
+$font-size-sm: $font-size-base * 0.875;
+
+$line-height-base: 1.5;
+
+// Heading
+// --------
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$headings-margin-bottom: $spacer / 2;
+$headings-font-weight: 500;
+$headings-line-height: 1.2;
+
+$mark-padding: 0.2em;
+$mark-bg: #fcf8e3;
+
+// Links
+//
+// Style anchor elements.
+// --------
+$link-color: map-get($standard-colors, 'blue');
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+// ----------------
+
+$border-width: 1px;
+$border-color: #ddd;
+$border-radius: 4px;
+
+$component-active-color: map-get($standard-colors, 'white');
+$component-active-bg: map-get($standard-colors, 'red');
