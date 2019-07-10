@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { History } from 'history';
 import Router from './Router';
+import AppLayout from './AppLayout';
 import { Store } from './state/store';
 
 interface Props {
@@ -13,7 +14,9 @@ interface Props {
 const Root: FC<Props> = ({ store, history }: Props): JSX.Element => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Router />
+      <AppLayout>
+        <Router />
+      </AppLayout>
     </ConnectedRouter>
   </Provider>
 );
