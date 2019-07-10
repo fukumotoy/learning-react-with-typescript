@@ -8,10 +8,12 @@ import {
 } from 'redux';
 import { createHashHistory } from 'history';
 import { routerMiddleware } from 'connected-react-router';
+import createSagaMiddleware from 'redux-saga';
 import createRootReducer, { actions, AppAction } from './ducks';
 
 const history = createHashHistory();
 const rootReducer = createRootReducer(history);
+const sagaMiddleware = createSagaMiddleware();
 
 export type AppState = ReturnType<typeof rootReducer>;
 export type Store = ReduxStore<AppState, AppAction>;
@@ -24,6 +26,9 @@ const configureStore = (initialState?: AppState): Store => {
   // Router Middleware
   const router = routerMiddleware(history);
   middleware.push(router);
+
+  // Redux Saga Middleware
+  middleware.push(sagaMiddleware);
 
   // Skip redux logs in console during the tests and production
   if (process.env.NODE_ENV === 'development') {
@@ -59,4 +64,4 @@ const configureStore = (initialState?: AppState): Store => {
 };
 
 export default configureStore;
-export { history };
+export { history, sagaMiddleware };
