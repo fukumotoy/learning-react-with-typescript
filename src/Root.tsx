@@ -1,18 +1,20 @@
 import React, { FC } from 'react';
-import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { History } from 'history';
 import Router from './Router';
 import { Store } from './state/store';
 
 interface Props {
   store: Store;
+  history: History;
 }
 
-const Root: FC<Props> = ({ store }: Props): JSX.Element => (
+const Root: FC<Props> = ({ store, history }: Props): JSX.Element => (
   <Provider store={store}>
-    <HashRouter>
+    <ConnectedRouter history={history}>
       <Router />
-    </HashRouter>
+    </ConnectedRouter>
   </Provider>
 );
 
