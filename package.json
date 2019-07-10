@@ -1,0 +1,16 @@
+{
+  "name": "learning-react-with-typescript",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "author": "fukumotoy",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fukumotoy/learning-react-with-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fukumotoy/learning-react-with-typescript/issues"
+  }
+}
