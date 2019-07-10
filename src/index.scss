@@ -3,3 +3,9 @@
 // ----------------------------------------------------------------
 @import './styles/variables';
 @import './styles/mixins';
+
+//
+// Foundation
+// ----------------------------------------------------------------
+@import './styles/foundation/normalize';
+@import './styles/foundation/reboot';
