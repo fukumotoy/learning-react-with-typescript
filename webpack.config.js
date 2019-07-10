@@ -5,8 +5,9 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = (env, { mode }) => {
+module.exports = (env, { mode, port = 3000, open = true }) => {
   /* eslint-disable no-underscore-dangle */
   const __IS_PRODUCTION__ = mode === 'production';
   const __IS_DEVELOPMENT__ = mode === 'development';
@@ -124,6 +125,23 @@ module.exports = (env, { mode }) => {
       },
     },
   };
+
+  if (__IS_DEVELOPMENT__) {
+    config.plugins.push(
+      new HtmlWebpackPlugin({
+        template: path.join(__dirname, './public/index.html'),
+      })
+    );
+
+    config.devServer = {
+      port,
+      contentBase: path.join(__dirname, 'public'),
+      watchContentBase: true,
+      open,
+    };
+
+    config.cache = true;
+  }
 
   return config;
 };
