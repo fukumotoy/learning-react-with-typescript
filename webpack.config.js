@@ -3,6 +3,8 @@ const path = require('path');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = (env, { mode }) => {
   /* eslint-disable no-underscore-dangle */
@@ -106,6 +108,21 @@ module.exports = (env, { mode }) => {
         filename: '[name].bundle.css',
       }),
     ],
+
+    optimization: {
+      minimize: __IS_PRODUCTION__,
+      minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin()],
+      splitChunks: {
+        cacheGroups: {
+          vendors: {
+            name: 'vendors',
+            test: /[\\/]node_modules[\\/]/,
+            chunks: 'initial',
+            enforce: true,
+          },
+        },
+      },
+    },
   };
 
   return config;
