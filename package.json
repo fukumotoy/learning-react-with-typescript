@@ -5,7 +5,8 @@
   "private": true,
   "author": "fukumotoy",
   "scripts": {
-    "build": "webpack --mode=production --progress"
+    "build": "webpack --mode=production --progress",
+    "eslint": "eslint --fix '**/*.{js,ts,tsx}'"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,17 @@
     "@babel/preset-typescript": "^7.3.3",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
     "fork-ts-checker-webpack-plugin": "^1.3.7",
     "mini-css-extract-plugin": "^0.7.0",
     "node-sass": "^4.12.0",
