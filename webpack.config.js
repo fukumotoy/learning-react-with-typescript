@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, { mode }) => {
+  /* eslint-disable no-underscore-dangle */
   const __IS_PRODUCTION__ = mode === 'production';
   const __IS_DEVELOPMENT__ = mode === 'development';
+  /* eslint-enable no-underscore-dangle */
 
   const config = {
     mode,
@@ -64,6 +67,7 @@ module.exports = (env, { mode }) => {
                 sourceMap: true,
                 ident: 'postcss',
                 plugins: () => [
+                  /* eslint-disable global-require */
                   require('postcss-flexbugs-fixes'),
                   require('postcss-preset-env')({
                     autoprefixer: {
@@ -71,6 +75,7 @@ module.exports = (env, { mode }) => {
                     },
                     stage: 3,
                   }),
+                  /* eslint-enable global-require */
                 ],
               },
             },
