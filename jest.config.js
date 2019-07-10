@@ -23,6 +23,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
     '!src/**/*.test.{ts,tsx}',
+    '!src/**/*.stories.{ts,tsx}',
     '!**/node_modules/**',
   ],
 };
