@@ -9,7 +9,8 @@ import {
 import { createHashHistory } from 'history';
 import { routerMiddleware } from 'connected-react-router';
 import createSagaMiddleware from 'redux-saga';
-import createRootReducer, { actions, AppAction } from './ducks';
+import createRootReducer, { actions } from './ducks';
+import { AppAction, AppState } from './AppState';
 
 const history = createHashHistory();
 const rootReducer = createRootReducer(history);
