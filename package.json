@@ -44,6 +44,7 @@
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.2",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/history": "^4.7.2",
@@ -102,6 +103,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "classnames": "^2.2.6",
     "connected-react-router": "^6.5.0",
     "history": "^4.9.0",
     "normalize.css": "^8.0.1",
