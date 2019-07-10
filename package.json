@@ -6,12 +6,13 @@
   "author": "fukumotoy",
   "scripts": {
     "start": "webpack-dev-server --mode=development",
-    "build": "webpack --mode=production --progress",
+    "build": "webpack --mode=production --progress && yarn storybook-build",
     "lint": "yarn eslint && yarn stylelint",
     "eslint": "eslint --fix '**/*.{js,ts,tsx}'",
     "stylelint": "stylelint --fix 'src/**/*.scss'",
     "test": "jest",
-    "storybook": "start-storybook ./public -p 6006"
+    "storybook": "start-storybook ./public -p 6006",
+    "storybook-build": "build-storybook -o docs"
   },
   "husky": {
     "hooks": {
