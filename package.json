@@ -5,6 +5,7 @@
   "private": true,
   "author": "fukumotoy",
   "scripts": {
+    "build": "webpack --mode=production --progress"
   },
   "repository": {
     "type": "git",
@@ -12,5 +13,9 @@
   },
   "bugs": {
     "url": "https://github.com/fukumotoy/learning-react-with-typescript/issues"
+  },
+  "devDependencies": {
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
   }
 }
