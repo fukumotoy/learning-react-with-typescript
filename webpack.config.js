@@ -27,6 +27,9 @@ module.exports = (env, { mode, port = 3000, open = true }) => {
 
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+      alias: {
+        'react-dom': '@hot-loader/react-dom',
+      },
     },
 
     module: {
@@ -65,6 +68,9 @@ module.exports = (env, { mode, port = 3000, open = true }) => {
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: true,
+              },
             },
             {
               loader: 'css-loader',
@@ -138,6 +144,7 @@ module.exports = (env, { mode, port = 3000, open = true }) => {
       contentBase: path.join(__dirname, 'public'),
       watchContentBase: true,
       open,
+      hot: true,
     };
 
     config.cache = true;
