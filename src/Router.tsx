@@ -7,6 +7,7 @@ const Router: FC = (): JSX.Element => (
     <Route path="/" exact component={pages.HomePage} />
     <Route path="/counter" component={pages.CounterPage} />
     <Route path="/modal" component={pages.ModalPage} />
+    <Route path="/todo" component={pages.TodoPage} />
   </Switch>
 );
 

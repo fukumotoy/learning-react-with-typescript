@@ -1,0 +1,12 @@
+.Todo {
+  @include clearfix;
+
+  margin-bottom: 1em;
+  padding: 0.4em 0.8em;
+  border: #ccc solid 1px;
+  border-radius: 0.4em;
+
+  &__removeButton {
+    float: right;
+  }
+}

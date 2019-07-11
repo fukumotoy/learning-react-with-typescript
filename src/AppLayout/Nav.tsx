@@ -12,6 +12,9 @@ const Nav: FC = (): JSX.Element => (
     <li>
       <Link to="/modal">Modal</Link>
     </li>
+    <li>
+      <Link to="/todo">Todo</Link>
+    </li>
   </ul>
 );
 
