@@ -5,7 +5,9 @@ interface Props {
 }
 
 const Result: FC<Props> = ({ count }: Props): JSX.Element => (
-  <div className="Result">{count}</div>
+  <div className="Result" data-test="result">
+    {count}
+  </div>
 );
 
 export default Result;
