@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="Modal__header"
+>
+  Text
+  <button
+    aria-label="閉じる"
+    className="Modal__dismiss"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+    >
+      ×
+    </span>
+  </button>
+</div>
+`;
